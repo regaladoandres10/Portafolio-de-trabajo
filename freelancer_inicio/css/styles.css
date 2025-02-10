@@ -1,0 +1,19 @@
+/*
+    Medidas en CSS
+    1rem = 16px
+    rem
+*/
+/* Reiniciar la pagina web */
+html {
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px; 
+}
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+}
+span {
+    font-size: 2rem;
+}

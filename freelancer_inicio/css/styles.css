@@ -3,17 +3,55 @@
     1rem = 16px
     rem
 */
+
+/* Pseudoselectores o variables de CSS o variables en general */
+:root{
+    --blanco: #ffffff;
+    --obscuro: #000;
+    /* Color que mas se va a utilizar */
+    --primary: #FFC107;
+    --secondary: #0097A7;
+    --gray: #757575;
+}
+
 /* Reiniciar la pagina web */
 html {
     font-size: 62.5%;
 }
 body{
-    font-size: 16px; 
+    font-size: 16px; /* 1rem = 10px */
 }
-h1 {
+
+.titulo{
     text-align: center;
     font-size: 3.8rem;
+    /* De esta manera se utiliza la variable 
+    color: var(--primary)
+    */
+    font-family: 'Krub', sans-serif;
+    /* normal = 400 ; bold = 700 */
+    font-weight: 700;
 }
-span {
+
+h1.titulo span {
     font-size: 2rem;
+}
+
+.contenedor{
+
+    width: 120rem; /*1200px*/
+
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.bg-nav{
+    background-color: var(--secondary);
+}
+
+.navegacion-principal {
+
+    
 }

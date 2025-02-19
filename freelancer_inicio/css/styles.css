@@ -23,7 +23,7 @@ body{
     font-family: 'Krub', sans-serif;
 }
 
-.titulo{
+.title{
     text-align: center;
     font-size: 3.8rem;
     /* De esta manera se utiliza la variable 
@@ -34,11 +34,11 @@ body{
     font-weight: 700;
 }
 
-titulo span {
+.title span {
     font-size: 2rem;
 }
 
-.contenedor{
+.container{
 
     max-width: 120rem; /*1200px*/
 
@@ -52,19 +52,19 @@ titulo span {
     background-color: var(--secondary);
 }
 
-.navegacion-principal{
+.main-navigation{
     display: flex;
     flex-direction: column;
 }
 
 @media (min-width: 768px) {
-    .navegacion-principal{
+    .main-navigation{
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
-.navegacion-principal a{
+.main-navigation a{
     display: block;
     text-align: center;
     padding: 1rem;
@@ -73,9 +73,18 @@ titulo span {
     font-weight: bold;
 }
 
-.navegacion-principal a:hover{
+.main-navigation a:hover{
     background-color: var(--primary);
     color: var(--obscuro);
+}
+
+.hero{
+    /* Nos permite obtener la ubicacion de la imagen que queramos mostrar */
+    background-image: url(../img/hero.jpg);
+    /* Hace que la imagen no se repita */
+    background-repeat: no-repeat;
+    /* Hace que la imagen se ajuste al tamaño del contenedor */
+    background-size: cover;
 }
 
 /*

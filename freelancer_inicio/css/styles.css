@@ -1,7 +1,15 @@
 /*
+    Notas:
     Medidas en CSS
     1rem = 16px
     rem
+
+    * = Selecciona todos los elementos de HTML
+
+    normal = 400 ; bold = 700 
+
+    De esta manera se utiliza la variable 
+    color: var(--primary)
 */
 
 /* Pseudoselectores o variables de CSS o variables en general */
@@ -13,33 +21,39 @@
     --secondary: #0097A7;
     --gray: #757575;
 }
-
+/* Creando el design system */
 /* Reiniciar la pagina web */
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+/* Ponle a todos los elementos del HTML esta propiedad */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body{
-    font-size: 16px; /* 1rem = 10px */
+    font-size: 14px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-}
 
-.title{
-    text-align: center;
+}
+/* Maquetando el diseño */
+h1{
     font-size: 3.8rem;
-    /* De esta manera se utiliza la variable 
-    color: var(--primary)
-    */
-    
-    /* normal = 400 ; bold = 700 */
-    font-weight: 700;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
 }
 
+h1,h2,h3{
+    text-align: center;
+}
 .title span {
     font-size: 2rem;
 }
-
 .container{
-
     max-width: 120rem; /*1200px*/
 
     margin-top: 0;
@@ -47,23 +61,19 @@ body{
     margin-bottom: 0;
     margin-left: auto;
 }
-
 .nav-bg{
     background-color: var(--secondary);
 }
-
 .main-navigation{
     display: flex;
     flex-direction: column;
 }
-
 @media (min-width: 768px) {
     .main-navigation{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
-
 .main-navigation a{
     display: block;
     text-align: center;
@@ -72,12 +82,10 @@ body{
     text-decoration: none;
     font-weight: bold;
 }
-
 .main-navigation a:hover{
     background-color: var(--primary);
     color: var(--obscuro);
 }
-
 .hero{
     /* Nos permite obtener la ubicacion de la imagen que queramos mostrar */
     background-image: url(../img/hero.jpg);
@@ -85,6 +93,33 @@ body{
     background-repeat: no-repeat;
     /* Hace que la imagen se ajuste al tamaño del contenedor */
     background-size: cover;
+    height: 38rem;
+    /* Padre */
+    position: relative;
+}
+.container-hero{
+    /* Hijo */
+    position: absolute;
+    /* Poner el fondo con un color negro transparente */
+    background-color: rgba(0,0,0,.7);
+    /* Ajustar el tamaño del contenedor (imagen) */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-hero h2,
+.container-hero p{
+    color: var(--blanco);
+}
+
+.ubication{
+    display: flex;
+    align-items: baseline;
 }
 
 /*

@@ -10,6 +10,9 @@
 
     De esta manera se utiliza la variable 
     color: var(--primary)
+
+    color de fondo: siempre ira en la etiqueta body
+
 */
 
 /* Pseudoselectores o variables de CSS o variables en general */
@@ -20,9 +23,12 @@
     --primary: #FFC107;
     --secondary: #0097A7;
     --gray: #757575;
+    --grayClear: #DFE9F3;
 }
 /* Creando el design system */
-/* Reiniciar la pagina web */
+/* Reiniciar la pagina web y aplicando el modelo de caja */
+
+/* Globales */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -32,10 +38,52 @@ html {
     box-sizing: inherit;
 }
 body{
-    font-size: 14px; /* 1rem = 10px */
+    font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-
+    /* Aplicar degradado a la pagina web */
+    background-image: linear-gradient(to top, var(--grayClear) 0%, var(--blanco));
 }
+
+.title span {
+    font-size: 2rem;
+}
+.container{
+    max-width: 110rem; /*1200px*/
+    margin: 0 auto;
+    
+}
+
+.button{
+    background-color: var(--secondary);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    /* Ponemos las letras en mayuscula */
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px){
+    .button{
+        width: auto;
+    }
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48); /* -webkit : Es utilizado por chrome */
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48); /* moz: Es utilizado por fire-fox */
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+
+    background-color: var(--blanco); /* Agregando el color blano de fondo */
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+/* Tipografia */
 /* Maquetando el diseño */
 h1{
     font-size: 3.8rem;
@@ -50,17 +98,9 @@ h3{
 h1,h2,h3{
     text-align: center;
 }
-.title span {
-    font-size: 2rem;
-}
-.container{
-    max-width: 120rem; /*1200px*/
 
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
-}
+/* Navegacion */
+
 .nav-bg{
     background-color: var(--secondary);
 }
@@ -117,9 +157,13 @@ h1,h2,h3{
     color: var(--blanco);
 }
 
-.ubication{
+.container-hero .ubication{
     display: flex;
     align-items: baseline;
+}
+
+.services{
+    display: grid;
 }
 
 /*

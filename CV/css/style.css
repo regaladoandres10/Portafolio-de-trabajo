@@ -1,0 +1,101 @@
+/* Pseudocolores o variables de css */
+:root {
+    --gray: #212437;
+    --grayClear: #23253A;
+    --white: #FAFEFE;
+    --pink: #FF4B57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 12pt;
+}
+
+.title {
+    font-weight: 100;
+    font-size: 3rem;
+    color: #FAFEFE;
+    margin-bottom: 15px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;;
+    background-color: #23253A;
+}
+
+.nav-bg {
+    background-color: var(--gray);
+    padding: 15px;
+}
+
+.main-navigation{
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: flex-end;
+    gap: 30px;
+    font-weight: lighter;
+    margin-right: 120px;
+}
+
+nav a {
+    font-size: 11pt;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.container-father {
+    margin: 0 50px;
+}
+
+.banner {
+    padding: 200px 100px;
+}
+
+.container-banner p{
+    color: #4f557c;
+    margin-bottom: 20px;
+}
+
+.button {
+    border-style: hidden;
+    padding: 15px;
+    width: 15%;
+    font-weight: bold;
+    background-color: var(--pink);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    border-style: solid;
+    background-color: var(--gray);
+    border-color: var(--pink);
+}
+
+.container-services {
+    padding: 150px 100px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.topic {
+
+    font-size: 14pt;
+}
+
+/* Scroll type */
+.banner {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+

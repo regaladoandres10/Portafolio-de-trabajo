@@ -1,0 +1,32 @@
+:root {
+    --gray: #212437;
+    --grayClear: #23253A;
+    --white: #FAFEFE;
+    --pink: #FD5358;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+
